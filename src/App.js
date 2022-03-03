@@ -134,10 +134,12 @@ class App extends Component{
 
 	render(){
 		return(
-			<div className="game-area">
-				<div className="score-and-speed"> Speed:{155-this.state.speed}, Score: {this.state.score}</div>
-				<Snake snakeDots={this.state.snakeDots} />
-				<Food dot={this.state.food} />
+			<div>
+				<div className="score-and-speed"> [Speed Level: {(150-this.state.speed)/5}] - [Score: {this.state.score*5}]</div>
+				<div className="game-area">
+					<Snake snakeDots={this.state.snakeDots} />
+					<Food dot={this.state.food} />
+				</div>
 			</div>
 		);
 	}
